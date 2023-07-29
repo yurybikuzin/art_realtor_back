@@ -47,7 +47,7 @@
 
 Создано консольное приложение [art_reatlor_back](https://github.com/yurybikuzin/export_from_elastic/tree/main/src/rust/art_realtor_back). 
 
-Код разбит на несколько crate'ов и оформлен в виде [Cargo Workspace](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html)
+Код разбит на [несколько crate'ов](https://github.com/yurybikuzin/export_from_elastic/tree/main/src/rust) и оформлен в виде [Cargo Workspace](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html)
 
 Компилируется с указанием `--target x86_64-unknown-linux-musl` для статической линковки всех (возможно) необходимых библиотек. В результате получается standalone монолит 18MB, не нуждающийся в динамических зависимостях. Что упрощает процедуру деплоя
 
