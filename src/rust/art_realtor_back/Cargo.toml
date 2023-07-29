@@ -47,7 +47,6 @@ elastic_scan = { path = "../elastic_scan" }
 mls_facet = { path = "../mls_facet" }
 json = { path = "../json" }
 config = "0.13"
-warp = "0.3"
 thiserror = "1"
 reqwest = { version = "0.11", features = ["json", "gzip", "cookies", "multipart"] }
 http = "0.2"
