@@ -1,0 +1,19 @@
+[elastic]
+max_at_once=2
+host="http://stable-mls-search2.baza-winner.ru:9200"
+
+# fetch_limit=5000
+# scroll_timeout_secs=10
+fetch_limit=500
+scroll_timeout_secs=30
+
+# fetch_limit=2
+# fetch_once=true
+# scroll_timeout_secs=1
+
+error_timeout_secs=600
+
+[store]
+bunches_to_save_max_len=2
+
+

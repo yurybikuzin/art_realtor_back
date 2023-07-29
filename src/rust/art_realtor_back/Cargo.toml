@@ -1,0 +1,62 @@
+#cargo-features = ["edition2021"]
+
+[package]
+name = "art_realtor_back"
+version = "0.9.1"
+# 0.9.1: fixed issue with for-site filename
+# 0.9.0: optimized offer_pub_list
+# 0.8.0: fixed issue with wrong offer_pub_list export
+# 0.7.0: panic when meet 404 from elastic (means scroll token is expired)
+# 0.6.1: refactored: simplified internal code structure
+# 0.6.0: implemented for-analytics.msk_habit.offer.csv.gz for-analytics.msk_habit.offer_pub_list.csv.gz
+# 0.5.1: Site(Option<ForSiteFacet>) => Site(ForSiteFacet)
+# 0.5.0: implemented for-site.cottage.json.gz
+# 0.4.0: implemented for-site.habit.json.gz
+# 0.3.0: implemented simultaneous scan for-site Habit and Cottage
+# 0.2.0: implemented stub `for-site`: scans elastic and writes output file, but its content has no sense
+# 0.1.0: initial commit
+authors = ["Yury Bikuzin <yury.bikuzin@gmail.com>"]
+edition = "2021"
+build = "build.rs"
+
+[build-dependencies]
+built = "0.6"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+dotenv = "0.15"
+pretty_env_logger = "0.5"
+structopt = { version = "0.3" }
+futures = { version = "0.3" }
+openssl = { version = "0.10", features = ["vendored"] }
+lazy_static = "1"
+regex = "1"
+strum = { version = "0.25", features = ["derive"] }
+paste = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = "0.4"
+chrono-tz = "0.8"
+common_macros2 = { path = "../common_macros2" }
+arrange_millis = { path = "../arrange_millis" }
+elastic_scan = { path = "../elastic_scan" }
+mls_facet = { path = "../mls_facet" }
+json = { path = "../json" }
+config = "0.13"
+warp = "0.3"
+thiserror = "1"
+reqwest = { version = "0.11", features = ["json", "gzip", "cookies", "multipart"] }
+http = "0.2"
+humantime = "2"
+csv = "1"
+op_mode = { path = "../op_mode" }
+flate2 = "^1"
+const_format = "^0.2"
+
+[dev-dependencies]
+test_helper = { path = "../test_helper" }
+pretty_assertions = "1"

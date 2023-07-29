@@ -1,0 +1,22 @@
+#cargo-features = ["edition2021"]
+
+[package]
+name = "elastic_scan"
+version = "0.3.0"
+# 0.3.0 - panic if 404
+# extracted 'fn fields'
+authors = ["Yury Bikuzin <yury.bikuzin@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+anyhow = "1"
+tokio = { version = "1", features = ["full"]}
+serde = { version = "1", features = ["derive"] }
+reqwest = { version = "0.11", features = ["json", "gzip"] }
+serde_json = "1"
+arrange_millis = { path = "../arrange_millis" }
+chrono = "0.4"
+
