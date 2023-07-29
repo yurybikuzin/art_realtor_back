@@ -45,7 +45,7 @@
 
 # Решение
 
-Создано консольное приложение [art_reatlor_back](tree/main/src/rust/art_realtor_back). 
+Создано консольное приложение [art_reatlor_back](https://github.com/yurybikuzin/export_from_elastic/tree/main/src/rust/art_realtor_back). 
 
 Код разбит на несколько crate'ов и оформлен в виде [Cargo Workspace](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html)
 
